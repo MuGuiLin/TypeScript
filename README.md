@@ -1,7 +1,6 @@
 
-
-## TypeScript 
-    ### TypeScript
+    
+	### TypeScript
         1、TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准。
 
         2、TypeScript 由微软开发的自由和开源的编程语言。
