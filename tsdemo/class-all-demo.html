@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            padding: 10px;
+            font-size: 18px;
+            background: #888;
+        }
+
+        input,
+        button {
+            margin: 10px 20px;
+            padding: 5px 10px;
+        }
+
+        table {
+            margin: auto;
+            width: 1000px;
+            border: 2px solid;
+            text-align: center;
+        }
+
+        th,
+        td {
+            width: 200px;
+            height: 40px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TypeScript 数据类型、接口、类、泛型的综合实例</h1>
+    <hr>
+    <pre>
+        * 要求：
+            1、有insert、delete、select、update方法，可用于增、删、查、改用户数据。
+            2、约束统一规范、代码可重用。
+        
+        * 思路：需要约束规范所以用 接口来做规范，代码重用 泛型的做。
+            1、接口：在面向对象编程中，接口是一种规范的定义 如：数据类型、方法、行为等。
+            2、泛型：简单来说，泛型就是解决类、方法、接口的复用（重用）性问题的。
+    </pre>
+    <section>
+        <form action="" method="post">
+            ID：<input type="text" id="userId" /> 
+            用户：<input type="text" id="name" />
+            密码：<input type="text" id="pswd" />
+
+            <button type="button" id="insert">新 增</button>
+            <button type="button" id="select">查 询</button>
+            <button type="button" id="update">更 新</button>
+        </form>
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>密码</th>
+                    <th>操作</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+    </section>
+    <script src="./js/class-all-demo.js"></script>
+</body>
+
+</html>

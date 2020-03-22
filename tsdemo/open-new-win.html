@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS打开新窗口</title>
+</head>
+
+<body>
+
+    <button type="button" id="open-btn">打开新窗口</button>
+
+    <script async>
+
+        window.onload = function () {
+
+            function open() {
+
+                // 新窗口默认宽高
+                window.open('https://cn.bing.com', "_blank", "toolbar=no,menubar=no,location=no,status=no");
+
+                //  新窗口宽350，高750
+                window.open('https://cn.bing.com', "_blank", "width=350,height=750,toolbar=no,menubar=no,location=no,status=no");
+
+                // 新窗口全屏
+                window.open('https://cn.bing.com', "_blank", 'width=' + screen.width + ', height=' + screen.height + ',top=0,left=0,toolbar=no,menubar=no,location=no,status=no,help=no,center=yes,scrollbars=yes,resizable=yes,minmizebutton=yes,maxmizebutton=yes');
+
+                // 关闭原来的旧窗口
+                window.opener = null; window.close();
+
+
+                /*
+                window.open()方法参数说明：
+
+                    let winObj = window.open(url, name, features, replace);
+
+                    参数1：url 【可选参数，字符串类型】
+                        要在新打开的窗口中加载的URL，如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。
+
+
+                    参数2：name 【可选参数，字符串类型】
+                        该字符串是一个由逗号分隔的特征列表，其中包括数字、字母和下划线，该字符声明了新窗口的名称。这个名称可以用作标记 <a> 和 <form> 的属性 target 的值。如果该参数指定了一个已经存在的窗口，那么 open() 方法就不再创建一个新窗口，而只是返回对指定窗口的引用。在这种情况下，features 将被忽略。
+                    
+
+                    参数3：features 【可选参数，字符串类型】
+                        列出新窗口的特征(大小，位置，滚动条等)，一个可选的布尔值。规定了装载到窗口的 URL 是在窗口的浏览历史中创建一个新条目，还是替换浏览历史中的当前条目。
+                    
+                        支持下面的值：
+
+                            height 是打开窗口的高度
+
+                            width 是打开窗口的宽度
+
+                            top 是窗口距离显示器顶端（y坐标）的像素数
+
+                            left 是窗口距离显示器左边（x坐标）的像素数
+
+                            titlebar = yes|no|1|0  设置显示标题栏，默认为 yes。
+
+                            toolbar = yes|no|1|0  设置是否显示工具栏，默认为 yes。
+                            
+                            location = yes|no|1|0  设置是否显示地址栏，默认为 yes。 注：经测试隐藏地址栏无效 location=no，因为一些浏览器会强制新窗口始终渲染位置栏
+
+                            menubar = yes|no|1|0  设置是否显示菜单栏，默认为 yes。
+                            
+                            status = yes|no|1|0  设置是否显示状态栏，默认为 yes。
+
+                            scrollbars = yes|no|1|0  设置是否显示滚动条，默认为 yes。
+
+                            resizable = yes|no|1|0  设置是否可以调整大小，默认为 yes。
+
+                            channelmode=yes|no|1|0	设置是否使用剧院模式显示窗口，默认为 no。
+
+                            directories=yes|no|1|0	设置是否添加目录按钮，默认为 yes。
+
+                            fullscreen=yes|no|1|0	设置是否使用全屏模式显示浏览器，默认为 no。 注：处于全屏模式的窗口必须同时处于剧院模式。
+
+
+                    参数4：replace 【可选参数，布尔值类型】
+                        
+                        true - URL 替换浏览历史中的当前条目。
+                        false - URL 在浏览历史中创建新的条目。
+                */
+
+       
+            };
+
+            let oBtn = document.querySelector('#open-btn');
+
+            oBtn['onclick'] = function () {
+
+                open();
+            };
+        };
+
+
+    </script>
+</body>
+
+</html>

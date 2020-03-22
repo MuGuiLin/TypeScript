@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name-space</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            padding: 10px;
+            font-size: 18px;
+            background: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>TypeScript 中的 NameSpace 命名空间</h1>
+    <hr>
+    <pre>
+            /*
+            * 命名空间 NameSpace
+                在代码量较大的情况下，为了避免各种变量相冲突，可将相似功能的类、函数、接口、变量等放了命名空间中。
+                和Java中的包、.Net中的命名空间一样，TS中的命名空间可以将代码包裹起来（注：默认在命名空间中的都是私有的，外部不能访问），如对外 用export暴露需要在外部访问的数据对象。
+            
+            * 注：默认在命名空间中的都是私有的，外部不能访问，如外部要访问，就在要访问的类、函数、接口、变量等前面加上 export 关键字，外就可访问了，
+
+            * 命名空间 和 模块的区别
+                1、命名空间：内部模块，主要用于组织代码，避免命名冲突（在不同的命名空间中，可以有相同所有的变量名，类、函数、接口等，它们不会冲突，因为它们虽然相同，但是不是同一个命名空间！）。
+                2、模 块：TS外部模块的简称，侧重代码的复用性，在一个模块中可以包含1个或多个命名空间。
+            
+
+            * TS声明命名空间的关键字：namespace
+
+
+            * 在本实例中，在不同的命名空间里，都有相同名的变量名，类名、函数名、接口名等，它们不会冲突，这样就是 空间 避免命名冲突的作用所在！
+            */
+
+        </pre>
+    
+    <script async src="./js/name-space.js"></script>
+    
+    <!-- <script type="module" async src="./js/modules/import-name-space-module.js"></script> -->
+</body>
+</html>

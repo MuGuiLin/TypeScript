@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            padding: 10px;
+            font-size: 18px;
+            background: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TypeScript 中的 Module 模块</h1>
+    <hr>
+    <pre>
+        /*
+        * 什么是模块：
+            在TS中，模块可分为两类：
+            1、内部模块（又叫命名空间）
+            2、外部模块（简称模块）：模块在自身的作用域中执行，而是在全局作用域中，它是一个独立的文件。
+        
+        * 实际作用：
+            1、在工作中可以把一些公共的功能单独抽离成一个独立文件作为一个模块。
+            2、模块里的变量、函数、类等 默认都是私有的，外部是不能访问的。
+            3、要在外部访问里面的数据如变量(属性)、函数(方法)、类等等，就要通过export向外一一暴露，并在引用的地方通过import来引入模块。
+        */
+
+
+        <h2>在浏览器中加载ES6模块：</h2>
+            直接使用 &lt;script> 标签，但是要加入type="module"属性。如：&lt;script type="module" src="myjs.js">&lt;/script>
+            
+            浏览器对于带有type="module"的&lt;script>，都是异步加载，不会造成堵塞浏览器，即等到整个页面渲染完，再执行模块脚本，等同于defer属性。
+            
+            当然也可以加上async属性，只要加载完成，渲染引擎就会中断渲染立即执行，执行结束之后再回复渲染。
+
+        <h2>defer 与 async属性：</h2>
+            defer是"渲染完再执行"：等到整个页面正常渲染结束，才会执行js。
+
+            async是"下载完就执行"：下载完脚本，中断渲染，执行完脚本之后再继续渲染。
+
+            所以在&lt;script>标签中加上defer 或 async属性，脚本就会异步加载。渲染引擎遇到这一行命令，就会开始下载外部脚本，但不会等它下载和执行，而是直接执行后面的命令。
+
+         
+    </pre>
+
+    <script type="module" async src="./js/module.js"></script>
+</body>
+
+</html>
