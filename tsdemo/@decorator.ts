@@ -12,7 +12,7 @@
 
 
 
-console.log(`---------------- 普通装饰器(不能传参) ----------------`);
+console.log(`---------------- 普通类装饰器(不能传参) ----------------`);
 
 // 类装饰器：在类声明之前声明【用@开头，紧靠着类声明处】，它用于类构造器函数，可在不修改原来类的基础上：监视、修改、替换类的定义。
 
@@ -61,7 +61,11 @@ http.showData();
 
 
 
-console.log(`\n\n---------------- 装饰器工厂(可以传参) ----------------`);
+
+
+
+
+console.log(`\n\n---------------- 类装饰器工厂(可以传参) ----------------`);
 //类装饰器：装饰器工厂(可以传参)
 
 function logClass(par: string, url?: string) {
@@ -80,7 +84,6 @@ function logClass(par: string, url?: string) {
 class WssClient {
 
     constructor() {
-
     };
 
     showUrl() {
@@ -92,6 +95,12 @@ class WssClient {
 const wss = new WssClient();
 wss.showUrl();
 console.log('我是在实例化后才访问的：', wss.mupiao);
+
+
+
+
+
+
 
 
 
@@ -113,7 +122,6 @@ function classZsq(obj: any) {
     return function (tag: any) {
 
         // 注：tag 就是Person类
-
         return class extends tag {
 
             // 重载属性
@@ -169,6 +177,8 @@ console.log(P.name);
 // P.init()
 
 P.getData();
+
+
 
 
 
@@ -242,6 +252,7 @@ const A: any = new Attr();
 console.log(A.six);
 
 A.getData();
+
 
 
 
@@ -358,6 +369,12 @@ F.log('666');
 
 F.getData('abc', 888);
 F.getWss('修改方法', 666);
+
+
+
+
+
+
 
 
 
