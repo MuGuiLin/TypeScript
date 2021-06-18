@@ -1,6 +1,6 @@
 "use strict";
 /**
- *  * TypeScript 数据类型、接口、类、泛型的综合实例 --> 封装一个可用于操作LocalDB、MysqlDB、MongoDB的底层库。
+ * TypeScript 数据类型、接口、类、泛型的综合实例 --> 封装一个可用于操作local、Mongodb、Mysql的底层库。
  *
  * 要求：1、有insert、delete、select、update方法，可用于增、删、查、改用户数据。
  *       2、约束统一规范、代码可重用。

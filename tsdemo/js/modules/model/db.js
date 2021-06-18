@@ -10,6 +10,7 @@
  *      2、泛型：简单来说，泛型就是解决类、方法、接口的复用（重用）性问题的。
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MongoDB = exports.MysqlDB = exports.LocalDB = void 0;
 ;
 // 定义操作LocalDB数据库的类，注：由于用了泛型接口来定义方法，所以类也一定是一个泛型类，并且要在类中实现接口的所有定义属性 或 方法！！
 var LocalDB = /** @class */ (function () {

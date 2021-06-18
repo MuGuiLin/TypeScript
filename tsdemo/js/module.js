@@ -11,15 +11,27 @@
  *      3、要在外部访问里面的数据如变量(属性)、函数(方法)、类等等，就要通过export向外一一暴露，并在引用的地方通过import来引入模块。
  *
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
     return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 // 引入模块：import from 
@@ -30,7 +42,7 @@ console.log(export_test_1.default);
 // default 默认引用函数
 // console.log(mupiao(12, 33));
 // default 默认类
-console.log(new export_test_1.default("", 0).Max(100, 200));
+console.log(new export_test_1.default().Max(100, 200));
 // 引入方式2：用哪个就引哪个【注：{}中的变量名，一定要和模块中暴露的(变量名，函数名，类名等)一样哦，如果太长或有重名，可以用 as 来起别名】
 console.log('\n\n\n 引入方式2：用哪个就引哪个【注：{}中的变量名，一定要和模块中暴露的(变量名，函数名，类名等)一样哦，如果太长或有重名，可以用 as 来起别名】');
 var export_test_2 = require("./modules/export-test");
@@ -45,4 +57,4 @@ mu.hobby();
 // default 默认引用函数
 // console.log(mu.default(12, 33));
 // default 默认类
-console.log(new mu.default('', 0).Max(24, 12));
+console.log(new mu.default().Max(24, 12));

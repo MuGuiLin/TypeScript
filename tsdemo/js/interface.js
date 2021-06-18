@@ -22,6 +22,7 @@ var __extends = (this && this.__extends) || (function () {
 console.log('\n\n--------------------- 常规参数约束 ----------------------\n\n');
 {
     //对传入的参数进行约束
+    // @ts-ignore
     function printName(name) {
         console.log('传入的参数只能是一个字符串');
     }

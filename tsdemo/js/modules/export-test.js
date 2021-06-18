@@ -1,6 +1,7 @@
 "use strict";
 // export 导出，直接在变量、函数、类等 前面加上 export 就可以向外暴露、导出了!
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.job = exports.age = exports.hobby = exports.user = void 0;
 exports.user = '沐枫';
 var age = 29;
 exports.age = age;
