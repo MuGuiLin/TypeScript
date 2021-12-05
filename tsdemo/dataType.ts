@@ -1,17 +1,25 @@
 
 /**
- * TS中的数据类型：10种，【注：tuple: 元组类型（属于数组）】
+ * TS中的数据类型：【注：tuple: 元组类型（属于数组）】
  *  string: 字符串类型, 
  *  number: 数字类型, 
  *  boolean: 布尔类型, 
  *  array: 数组类型, 
  *  tuple: 元组类型（属于数组）
  *  enum: 枚举类型, 
- *  any: 任意类型, 
+ * 
+ *  
  *  null: 空类型, 
  *  undifined: 未定义类型, 
  *  void: 没有类型, 
  *  never: 其他类型
+ *  any: 任意类型, 
+ *  unknown：顶级类型
+ * 
+ * 
+ *  注：当把类型看作是值的集合时，any 和 unknown 是包含所有值的集合，因为 any 和 unknown 在 TypeScript 中是所谓的“顶部类型”。
+ *  而：unknown 类型是 any 的类型安全版本。每当你想使用 any 时，应该先试着用 unknown。
+ *     在 any 允许我们做任何事的地方，unknown 的限制则大得多。
  */
 
 
