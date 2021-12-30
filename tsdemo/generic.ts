@@ -26,6 +26,9 @@
     function getNumber2(val: number): number {
         return val;
     };
+    function getNumber3(val: number | string): number | string {
+        return val;
+    };
 
     // 3、可返回任意类型 (这样就相当于放弃了类型检测了)
     function getData(val: any): any {
@@ -48,7 +51,12 @@
     function getDatas<T>(val: T): T {
 
         // 这里就是 根据所传入的数据类型，返回对应的数据类型
+        return val;
+    };
 
+    function getDatas2<T, K>(val: T, att: K): T {
+
+        // 这里就是 根据所传入的数据类型，返回对应的数据类型
         return val;
     };
 
@@ -63,12 +71,14 @@
     getDatas<string>('123');    // 正确
     getDatas<number>(123);      // 正确 参数据必须是数字类型
 
+    getDatas2<string, number>('1', 1); // 正确
+
 };
 
 
 console.log('\n\n---------------- 泛型类 的定义 ----------------\n\n');
 {
-    // 实现最小堆算法：要求支持返回数字，这里只能用普通的类来实现。
+    // JS实现最小堆算法：要求支持返回数字，这里只能用普通的类来实现。
     class MinClass {
 
         public list: number[] = [];
@@ -114,13 +124,14 @@ console.log('\n\n---------------- 泛型类 的定义 ----------------\n\n');
 
 
 
-    // 创建泛型类：实现最小堆算法：要求需要同时支持返回数字 和 字符串(a - z) 两种数据类型，用泛型类来实现。
+    // TS创建泛型类：实现最小堆算法：要求需要同时支持返回数字 和 字符串(a - z) 两种数据类型，用泛型类来实现。
     class MinNumStr<T> {
 
         public list: T[] = [];
 
-        constructor() {
-
+        name: T;
+        constructor( name: T) {
+            this.name = name;
         };
 
         // 返回堆数据
