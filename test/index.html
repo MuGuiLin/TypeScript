@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<script src="src.js" type="text/javascript" charset="utf-8"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-		<script>
-		if (annyang) {
-		  // Let's define our first command. First the text we expect, and then the function it should call
-		  var commands = {
-		    'show tps report': function() {
-		      $('#tpsreport').animate({bottom: '-100px'});
-		    }
-		  };
-		
-		  // Add our commands to annyang
-		  annyang.addCommands(commands);
-		
-		  // Start listening. You can call this here, or attach this call to an event, button, etc.
-		  annyang.start();
-		}
-		</script>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      kbd {
+        background-color: hsl(0deg, 0%, 99%);
+        border-radius: 3px;
+        border: 1px solid hsl(0deg, 0%, 80%);
+        padding: 4px 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>TypeScript => <kbd>tsc</kbd> 命令测试！</h1>
+    <hr />
+
+    <h2 id="tpsreport">
+      <p>用 tsc ./test.ts 或 tsc -w 命令 编译ts文 件到 js文件!</p>
+      <p>按 <kbd>F12键</kbd> 打开控制台查看！ </p>
+    </h2>
+
+    <script src="test.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script>
+      if (annyang) {
+        // Let's define our first command. First the text we expect, and then the function it should call
+        var commands = {
+          "show tps report": function () {
+            document.querySelector("#tpsreport").animate({ bottom: "-100px" });
+          },
+        };
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+      }
+    </script>
+  </body>
 </html>

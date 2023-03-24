@@ -1,0 +1,53 @@
+:root {
+  --color: '#4d85ff';
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  line-height: 100px;
+  color: #333;
+}
+.main {
+  margin: 30px auto;
+  width: 80vw;
+}
+.main table {
+  width: 100%;
+  border: 2px solid gray;
+}
+.main table caption {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.main table caption button {
+  padding: 5px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.main table tr td {
+  border: 1px solid gray;
+  line-height: 40px;
+}
+.main table tr td img {
+  max-width: 500px;
+}
+.main table tr td a {
+  width: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-all;
+}
+.main table thead {
+  background-color: #bababa;
+}
+.main table thead tr th {
+  text-align: center;
+  line-height: 40px;
+  color: #00a300;
+}

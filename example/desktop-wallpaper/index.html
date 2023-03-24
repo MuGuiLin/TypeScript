@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>获取桌面壁纸</title>
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+
+  <body>
+    <h1>获取桌面壁纸</h1>
+    <hr />
+    <main class="main">
+      <table>
+        <colgroup>
+          <col width="50px" />
+          <col width="auto" />
+          <col width="50px" />
+          <col width="50px" />
+          <col width="200px" />
+          <col width="200px" />
+          <col width="50px" />
+          <col width="50px" />
+        </colgroup>
+        <caption>
+          <button type="button" id="add-btn">🚀获取单条</button>
+          <button type="button" id="all-btn">📊获取所有</button>
+        </caption>
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>预览</th>
+            <th>标题</th>
+            <th>版权</th>
+            <th>链接</th>
+            <th>搜索</th>
+            <th>日期</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+        <tfoot></tfoot>
+      </table>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

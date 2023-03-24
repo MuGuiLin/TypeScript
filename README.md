@@ -6,7 +6,13 @@
 >
 > 3、TypeScript 设计目标是开发大型应用，它最终是编译成标准的JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上、任何计算机和任何操作系统上运行，并且是开源的。
 
-
+> 一、 Typescript 介绍
+> 1. TypeScript 是由微软开发的一款开源的编程语言。
+> 4、 TypeScript 是 Javascript 的超级，遵循最新的 ES6、Es5 规范。TypeScript 扩展了 JavaScript
+> 的语法。
+> 2. TypeScript 更像后端 java、C#这样的面向对象语言可以让 js 开发大型企业项目。
+> 5、谷歌也在大力支持 Typescript 的推广，谷歌的 angular2.x+就是基于 Typescript 语法。
+> 6、最新的 Vue 、React 也可以集成 TypeScript
 
 > **[TypeScript 中文官网](https://www.tslang.cn/)**，**[TypeScript 英文官网](https://www.typescriptlang.org/)**
 
@@ -67,7 +73,7 @@
 
 ```bash
 在项目根目录中，打开Dos命令工具 执行如下命令： 
-	如：tsc -init 
+	如：tsc --init 
 
 命令执行后会自动生成一个tsconfig.json 的配置文件
 ```
