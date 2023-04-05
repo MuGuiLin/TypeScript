@@ -1,4 +1,4 @@
-## 关于TypeScript【JavaScript的超集】
+## TypeScript【JavaScript的超集】
 
 > 1、TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 - 10... 标准。
 >
