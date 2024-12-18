@@ -37,7 +37,7 @@ personWatcher1.on('asdf', (oldVal, newVal) => {
 type WatcherType2<T> = {
     on<K extends keyof T & string>(
         // eventName: `${string & keyof T}Change`, // eventName 应该只能是："name" | "age" | "bool" | "list" | "obj"
-        eventName: `${K}Change`, // eventName 应该只能是："name" | "age" | "bool" | "list" | "obj"
+        eventName: `${K}Change`, // eventName 由于要监听的事件名是根据参数来的，所以要动态拼接
         callback: (oldVal: T[K], newVal: T[K]) => void): void;
 }
 
