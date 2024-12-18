@@ -26,7 +26,7 @@ const personWatcher1 = watch1({
 personWatcher1.on('name', (oldVal, newVal) => {
     console.log(oldVal, newVal)
 })
-// 
+// 不会报错
 personWatcher1.on('asdf', (oldVal, newVal) => {
     console.log(oldVal, newVal)
 })
