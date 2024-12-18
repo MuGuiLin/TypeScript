@@ -1,5 +1,10 @@
+/**
+ * 假设这样的一个应用场景：
+ *      用一个名为watch的函数，功能是用于监听某个对象，来得到一个监听器，该监听器可以注册事件eventName，比如：监听对象下的某个属性发生变化时，运行callback回调函数
+ */
 
-// TS 普通写法
+
+// TS 普通写法 的类型标注
 type WatcherType1 = {
     on(
         eventName: string,
@@ -28,7 +33,7 @@ personWatcher1.on('asdf', (oldVal, newVal) => {
 
 
 
-// TS 推荐写法
+// TS 推荐写法 的类型标注
 type WatcherType2<T> = {
     on<K extends keyof T & string>(
         // eventName: `${string & keyof T}Change`, // eventName 应该只能是："name" | "age" | "bool" | "list" | "obj"
