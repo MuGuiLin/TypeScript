@@ -7,7 +7,7 @@
 > 3、TypeScript 设计目标是开发大型应用，它最终是编译成标准的JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上、任何计算机和任何操作系统上运行，并且是开源的。
 
 > 一、 Typescript 介绍
-> 1. TypeScript 是由微软开发的一款开源的编程语言。
+> 1. TypeScript 是由微软推出的一个开源的编程语言。
 > 4、 TypeScript 是 Javascript 的超级，遵循最新的 ES6、Es5 规范。TypeScript 扩展了 JavaScript
 > 的语法。
 > 2. TypeScript 更像后端 java、C#这样的面向对象语言可以让 js 开发大型企业项目。
